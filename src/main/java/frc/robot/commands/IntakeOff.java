@@ -18,9 +18,9 @@ public class WristMotorStop extends Command {
 
   public static OI oi;
 
-  public WristMotorStop() {
+  public IntakeOff() {
     // Use requires() here to declare subsystem dependencies
-    requires(Robot.wristMotor);
+    requires(Robot.intakeMotor);
   }
 
   // Called just before this Command runs the first time
@@ -32,7 +32,7 @@ public class WristMotorStop extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    Robot.wristMotor.wristMotorStop();
+    Robot.intakeMotor.intakeMotorStop();
   }
 
   // Make this return true when this Command no longer needs to run execute()
@@ -44,7 +44,7 @@ public class WristMotorStop extends Command {
   // Called once after isFinished returns true
   @Override
   protected void end() {
-    Robot.wristMotor.wristMotorStop();
+    Robot.intakeMotor.IntakeOff();
   }
 
   // Called when another command which requires one or more of the same
