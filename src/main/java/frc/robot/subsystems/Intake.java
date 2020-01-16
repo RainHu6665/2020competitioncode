@@ -10,37 +10,39 @@ package frc.robot.subsystems;
 import edu.wpi.first.wpilibj.SpeedController;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.RobotMap;
-import frc.robot.commands.WristMotorStop;
+import frc.robot.commands.IntakeOn;
+import frc.robot.commands.IntakeOff;
 
 /**
  * An example subsystem.  You can replace me with your own Subsystem.
  */
-public class WristMotor extends Subsystem {
+public class Intake extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
-  private final SpeedController wristMotor = RobotMap.wristMotor;
+  private final SpeedController intakeMotor = RobotMap.intakeMotor;
 
   @Override
   public void initDefaultCommand() {
     // Set the default command for a subsystem here.
-    setDefaultCommand(new WristMotorStop());
+    setDefaultCommand(new IntakeOff());
   }
 
 
-  public void wristMotorUp(){
-    wristMotor.set(-0.65);
-    // System.err.println("Motor Up");
+  public void IntakeOn(){
+    intakeMotor.set(0.3);
+    System.err.println("Intake On");
   }
 
-  public void wristMotorDown(){
-    wristMotor.set(0.65);
-    // System.err.println("Motor Down");
+// wristMotorDown not currently in use.
+// public void wristMotorDown(){
+//     wristMotor.set(0.3);
+//     System.err.println("Motor Down");
   }
 
-  public void wristMotorStop(){
-    wristMotor.set(0.0);
-    // System.err.println("Motor Stop");
+  public void IntakeOff(){
+    intakeMotor.set(0.0);
+    System.err.println("Intake Off");
   }
 
 }
