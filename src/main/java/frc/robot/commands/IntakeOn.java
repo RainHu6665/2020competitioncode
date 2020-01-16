@@ -16,14 +16,14 @@ import frc.robot.RobotMap;
 /**
  * An example command.  You can replace me with your own command.
  */
-public class WristMotorUp extends Command {
+public class IntakeOn extends Command {
 
   public static OI oi;
-  private final Encoder enc = RobotMap.enc;
+  // private final Encoder enc = RobotMap.enc;
 
-  public WristMotorUp() {
+  public IntakeOn() {
     // Use requires() here to declare subsystem dependencies
-    requires(Robot.wristMotor);
+    requires(Robot.intakeMotor);
   }
 
   // Called just before this Command runs the first time
@@ -36,7 +36,7 @@ public class WristMotorUp extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    Robot.wristMotor.wristMotorUp();
+    Robot.intakeMotor.intakeOn();
     // int count = enc.get();
     // System.err.println(count);
     // if (count < -200){
@@ -53,7 +53,7 @@ public class WristMotorUp extends Command {
   // Called once after isFinished returns true
   @Override
   protected void end() {
-    Robot.wristMotor.wristMotorStop();
+    Robot.intakeMotor.intakeOff();
   }
 
   // Called when another command which requires one or more of the same
