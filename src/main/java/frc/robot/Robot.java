@@ -16,14 +16,14 @@ import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.robot.commands.ExampleCommand;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard; 
+// import frc.robot.commands.ExampleCommand;
 import frc.robot.commands.JoystickDrive;
-// import frc.robot.subsystems.ACompressor;
+import frc.robot.subsystems.ACompressor;
 import frc.robot.subsystems.ArmMotor;
-// import frc.robot.subsystems.HatchCone;
+import frc.robot.subsystems.PneumaticArm;
 import frc.robot.subsystems.DriveTrain;
-import frc.robot.subsystems.ExampleSubsystem;
+// import frc.robot.subsystems.ExampleSubsystem;
 import frc.robot.subsystems.RollerLeftMotor;
 // import frc.robot.subsystems.RollerRightMotor;
 import frc.robot.subsystems.WristMotor;
@@ -67,7 +67,7 @@ public class Robot extends TimedRobot {
     drive = new JoystickDrive();
 
     
-    // aCompressor = new ACompressor();
+    aCompressor = new ACompressor();
     armMotor = new ArmMotor();
     wristMotor = new WristMotor();
     rollerLeftMotor = new RollerLeftMotor();
