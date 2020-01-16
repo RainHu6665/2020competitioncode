@@ -16,17 +16,17 @@ import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard; 
-// import frc.robot.commands.ExampleCommand;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import frc.robot.commands.ExampleCommand;
 import frc.robot.commands.JoystickDrive;
-import frc.robot.subsystems.ACompressor;
+// import frc.robot.subsystems.ACompressor;
 import frc.robot.subsystems.ArmMotor;
-import frc.robot.subsystems.PneumaticArm;
+// import frc.robot.subsystems.HatchCone;
 import frc.robot.subsystems.DriveTrain;
-// import frc.robot.subsystems.ExampleSubsystem;
+import frc.robot.subsystems.ExampleSubsystem;
 import frc.robot.subsystems.RollerLeftMotor;
 // import frc.robot.subsystems.RollerRightMotor;
-import frc.robot.subsystems.WristMotor;
+import frc.robot.subsystems.Intake;
 
 
 
@@ -51,7 +51,7 @@ public class Robot extends TimedRobot {
   // public static HatchCone hatchCone;
   
   public static ArmMotor armMotor;
-  public static WristMotor wristMotor;
+  public static Intake intakeMotor;
   public static RollerLeftMotor rollerLeftMotor;
   // public static RollerRightMotor rollerRightMotor;
   //public static LimeLight limeLight;
@@ -67,9 +67,9 @@ public class Robot extends TimedRobot {
     drive = new JoystickDrive();
 
     
-    aCompressor = new ACompressor();
+    // aCompressor = new ACompressor();
     armMotor = new ArmMotor();
-    wristMotor = new WristMotor();
+    intakeMotor = new Intake();
     rollerLeftMotor = new RollerLeftMotor();
     // rollerRightMotor = new RollerRightMotor();
     // hatchCone = new HatchCone();
