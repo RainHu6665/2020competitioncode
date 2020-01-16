@@ -16,29 +16,27 @@ import frc.robot.RobotMap;
 /**
  * An example command.  You can replace me with your own command.
  */
-public class ArmMotorDown extends Command {
+public class LauncherOn extends Command {
 
   public static OI oi;
-  private final Encoder enc = RobotMap.enc;
 
-  public ArmMotorDown() {
+  public launcherOn() {
     // Use requires() here to declare subsystem dependencies
-    requires(Robot.armMotor);
+    requires(Robot.launcher);
   }
 
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
     // oi = new OI();
-    // enc.reset();
   }
 
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    Robot.armMotor.armMotorDown();
-    int count = enc.get();
-    System.err.println(count);
+    Robot.launcher.launcherOn();
+//     int count = enc.get();
+//     System.err.println(count);
     // if (count < -200){
     //   Robot.motorTest.motorStop();
     // }
@@ -53,7 +51,7 @@ public class ArmMotorDown extends Command {
   // Called once after isFinished returns true
   @Override
   protected void end() {
-    Robot.armMotor.armMotorStop();
+    Robot.launcher.launcherOff();
   }
 
   // Called when another command which requires one or more of the same
