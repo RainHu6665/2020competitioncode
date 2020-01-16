@@ -10,7 +10,7 @@ package frc.robot;
 import edu.wpi.cscore.UsbCamera;
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
-import edu.wpi.first.wpilibj.Encoder;
+// import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.Spark;
 import edu.wpi.first.wpilibj.SpeedController;
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
@@ -38,7 +38,7 @@ public class RobotMap {
   public static UsbCamera camera2;
   public static Compressor aCompressorCompressor;
 
-  public static Encoder enc;
+  // public static Encoder enc;
   
   public static SpeedController motorLFront;
   public static SpeedController motorRFront;
@@ -48,11 +48,11 @@ public class RobotMap {
   public static SpeedControllerGroup motorR;
 
   public static SpeedController armMotor;
-  public static SpeedController wristMotor;
+  public static SpeedController intakeMotor;
   public static SpeedController rollerLeftMotor;
   public static SpeedController rollerRightMotor;
-  public static DoubleSolenoid hatchConeSolenoid;
-
+  // public static DoubleSolenoid hatchConeSolenoid;
+  
   
   public static int motorLFrontPort = 0;
   public static int motorLBackPort = 1;
@@ -60,7 +60,7 @@ public class RobotMap {
   public static int motorRBackPort = 3;
 
   public static int armMotorPort = 5;
-  public static int wristMotorPort = 7;
+  public static int intakeMotorPort = 7;
   public static int rollerLeftMotorPort = 4;
   // public static int rollerRightMotorPort = 6;
 
@@ -95,14 +95,14 @@ public class RobotMap {
 
       armMotor = new Spark(armMotorPort);
       armMotor.setInverted (false);
-      wristMotor = new Spark(wristMotorPort);
-      wristMotor.setInverted (false);
+      intakeMotor = new Spark(intakeMotorPort);
+      intakeMotor.setInverted (false);
       rollerLeftMotor = new Spark(rollerLeftMotorPort);
       rollerLeftMotor.setInverted (false);
       // rollerRightMotor = new Spark(rollerRightMotorPort);
       // rollerRightMotor.setInverted(false);
       
-      enc = new Encoder(0, 1, false, Encoder.EncodingType.k4X);
+      // enc = new Encoder(0, 1, false, Encoder.EncodingType.k4X);
       // enc.setMaxPeriod(.1);
       // enc.setMinRate(10);
       // enc.setDistancePerPulse(5);
