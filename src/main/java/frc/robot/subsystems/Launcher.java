@@ -15,31 +15,31 @@ import frc.robot.commands.ArmMotorStop;
 /**
  * An example subsystem.  You can replace me with your own Subsystem.
  */
-public class ArmMotor extends Subsystem {
+public class Launcher extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
-  private final SpeedController armMotor = RobotMap.armMotor;
+  private final SpeedController launcher = RobotMap.launcher;
 
   @Override
   public void initDefaultCommand() {
     // Set the default command for a subsystem here.
-    setDefaultCommand(new ArmMotorStop());
+    setDefaultCommand(new launcherOff());
   }
 
 
-  public void armMotorUp(){
+  public void launcherOn(){
     armMotor.set(0.65);
     // System.err.println("Motor Up");
   }
 
 
-  public void armMotorDown(){
-    armMotor.set(-0.65);
-    // System.err.println("Motor Down");
-  }
+//   public void armMotorDown(){
+//     armMotor.set(-0.65);
+//     // System.err.println("Motor Down");
+//   }
 
-  public void armMotorStop(){
+  public void launcherOff(){
     armMotor.set(0.0);
   }
 
