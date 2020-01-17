@@ -35,3 +35,42 @@ public class HatchCone extends Subsystem {
     doubleSolenoid.set(Value.kReverse);
   }
 }
+
+
+
+//LIMELIGHT
+package frc.robot.subsystems;
+
+import edu.wpi.first.wpilibj.NetworkTableEntry;
+import edu.wpi.first.wpilibj.NetworkTableInstance;
+
+public class Limelight{
+    Private static NetworkTableInstance table =
+    
+public static enum LightMode
+       eOn, eoff, eBlink
+      
+public static enum CameraMode
+      eVision, eDriver
+      
+public static boolean isTarget(){
+     return getValue("tv").getDouble(0)=1
+       
+public static double getTx
+       return getValue("tx").getDouble(0.00)
+       
+public static double get Ty (){
+       return getValue("ty").getDouble(0.00)
+      
+public static double get Ta
+       return getValue("ta").getDouble(0.00)
+         
+public static double get Ts
+        return getValue("ts"),getDouble(0.00)
+         
+public static double get Tl
+        return getValue("tl"),getDouble(0.00)
+         
+public static double get setLedMode(LightMode mode) {
+         getValue
+      
